@@ -178,7 +178,7 @@ main {
 .hero {
   min-height: 100vh;
   min-height: 100dvh;
-  padding: calc(var(--header-h) + 3rem) var(--space) 4rem;
+  padding: calc(var(--header-h) + 10rem) var(--space) 4rem;
   max-width: var(--max);
   margin: 0 auto;
   display: flex;
@@ -433,22 +433,6 @@ main {
 @media (min-width: 768px) {
   .project-grid {
     grid-template-columns: repeat(2, 1fr);
-  }
-
-  .project-card--accent {
-    grid-column: span 2;
-    display: grid;
-    grid-template-columns: auto 1fr auto;
-    gap: 1.5rem 2rem;
-    align-items: start;
-  }
-
-  .project-card--accent .project-index {
-    grid-row: span 3;
-  }
-
-  .project-card--accent .project-tags {
-    grid-column: 2;
   }
 }
 
