@@ -186,6 +186,39 @@ main {
   justify-content: center;
 }
 
+.hero-grid {
+  display: grid;
+  gap: 1rem;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+@media (min-width: 900px) {
+  .hero-grid {
+    grid-template-columns: 1.4fr 1fr;
+    gap: 4rem;
+  }
+}
+
+.hero-portrait {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.hero-portrait img {
+  width: clamp(12rem, 35vw, 24rem);
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid var(--border);
+  box-shadow:
+    0 20px 60px rgba(124, 58, 237, 0.18),
+    0 0 0 8px rgba(124, 58, 237, 0.04);
+  background: var(--bg-card);
+}
+
 .hero-meta {
   display: flex;
   flex-wrap: wrap;
@@ -640,23 +673,20 @@ main {
   transform: translateY(0);
 }
 
-.hero .reveal:nth-child(1) {
+.hero-text .reveal:nth-child(1) {
   transition-delay: 0.05s;
 }
-.hero .reveal:nth-child(2) {
+.hero-text .reveal:nth-child(2) {
   transition-delay: 0.12s;
 }
-.hero .reveal:nth-child(3) {
+.hero-text .reveal:nth-child(3) {
   transition-delay: 0.2s;
 }
-.hero .reveal:nth-child(4) {
+.hero-text .reveal:nth-child(4) {
   transition-delay: 0.28s;
 }
-.hero .reveal:nth-child(5) {
+.hero-text .reveal:nth-child(5) {
   transition-delay: 0.36s;
-}
-.hero .reveal:nth-child(6) {
-  transition-delay: 0.44s;
 }
 
 @media (prefers-reduced-motion: reduce) {
